@@ -4,7 +4,9 @@ execute pathogen#infect()
 let mapleader = ","         " change <leader> command
 syntax enable               " use syntax highlighting
 filetype plugin indent on   " use filetype-specific indent options
+let g:netrw_dirhistmax = 0
 
+set autoindent
 set nocompatible
 set nospell spelllang=en_au " don't highlight mispelled words by default
 set number                  " show line numbers
@@ -27,16 +29,13 @@ set writebackup             " create a backup of open files
 set backupdir=~/tmp/swapfiles//,/tmp//
 set directory=~/tmp/swapfiles//,/tmp//
 set foldmethod=syntax
-set foldlevel=1
 
 " stops folds from opening while in insert method
 autocmd InsertEnter * if !exists('w:last_fdm') | let w:last_fdm=&foldmethod | setlocal foldmethod=manual | endif
 autocmd InsertLeave,WinLeave * if exists('w:last_fdm') | let &l:foldmethod=w:last_fdm | unlet w:last_fdm | endif
 
 " airline
-let g:airline_enable_branch = 1
 let g:airline_powerline_fonts = 1
-let g:airline#extensions#tabline#enabled = 1
 
 " map Ctrl-movement to move between window splits
 nnoremap <C-J> <C-W><C-J>
@@ -53,3 +52,5 @@ inoremap <up> <nop>
 inoremap <down> <nop>
 inoremap <left> <nop>
 inoremap <right> <nop>
+
+colorscheme molokai

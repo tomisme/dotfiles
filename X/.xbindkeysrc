@@ -1,8 +1,8 @@
-"xbindkeys_show" 
-  control+shift + k
-
 "amixer set Master 2dB+ unmute"
   XF86AudioRaiseVolume
 
 "amixer set Master 2dB- unmute"
   XF86AudioLowerVolume
+
+"amixer set Master mute"
+  XF86AudioMute

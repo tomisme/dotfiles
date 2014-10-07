@@ -1,5 +1,5 @@
 #!/bin/sh
-dwmstatus &
+dwmstatus.fish &
 xbindkeys
 setxkbmap -option caps:escape
 exec dwm
