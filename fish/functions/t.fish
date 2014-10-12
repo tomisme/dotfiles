@@ -1,3 +1,3 @@
 function t
-	tree
+	tree $argv
 end
