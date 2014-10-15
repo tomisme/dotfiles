@@ -7,10 +7,10 @@ var srcDir = '/home/tom/git/dotfiles/';
 
 var locations = [
   { src: 'functions', dest: '.config/fish/functions' },
-  { src: 'gitconfig', dest: '.gitconfig' },
+  { src: 'git/gitconfig', dest: '.gitconfig' },
   { src: 'vim', dest: '.vim' },
-  { src: 'xbindkeysrc', dest: '.xbindkeysrc' },
-  { src: 'xinitrc', dest: '.xinitrc' }
+  { src: 'X/xbindkeysrc', dest: '.xbindkeysrc' },
+  { src: 'X/xinitrc', dest: '.xinitrc' }
 ];
 
 _.map(locations, function(location) {
