@@ -1,27 +1,26 @@
-var fs      = require('fs');
-var trash   = require('trash');
-var _       = require('lodash');
+var rimraf = require('rimraf');
+var fs = require('fs');
+var _ = require('lodash');
 
-var homeDir = process.env.HOME;
+var destDir = '/home/tom/';
+var srcDir = '/home/tom/git/dotfiles/';
 
 var locations = [
-  { src: 'functions', dest: homeDir + '/.config/fish/functions' },
-  { src: 'gitconfig', dest: homeDir + '/.gitconfig' },
-  { src: 'vim', dest: homeDir +  '/.vim' },
-  { src: 'xbindkeysrc', dest: homeDir +  '/.xbindkeysrc' },
-  { src: 'xinitrc', dest: homeDir +  '/.xinitrc' }
+  { src: 'functions', dest: '.config/fish/functions' },
+  { src: 'gitconfig', dest: '.gitconfig' },
+  { src: 'vim', dest: '.vim' },
+  { src: 'xbindkeysrc', dest: '.xbindkeysrc' },
+  { src: 'xinitrc', dest: '.xinitrc' }
 ];
 
 _.map(locations, function(location) {
-  var dest = fs.realpathSync(location.dest);
-  var src = fs.realpathSync(location.src);
+  var dest = destDir + location.dest;
+  var src = srcDir + location.src;
 
-  console.log('Removing ' + dest);
-  fs.rmdir(dest, function() {
+  rimraf(dest, function() {
     console.log('Removed ' + dest);
-    console.log('Creating symlink from ' + src + ' to ' + dest);
     fs.symlink(src, dest, function() {
-      console.log('Created symlink from ' + src + ' to ' + dest);
+      console.log('Created symlink: ' + dest + ' -> ' + src);
     });
   });
 });
