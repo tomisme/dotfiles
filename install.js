@@ -1,21 +1,23 @@
 var rimraf = require('rimraf');
 var fs = require('fs');
-var _ = require('lodash');
+var path = require('path');
 
-var destDir = '/home/tom/';
-var srcDir = '/home/tom/git/dotfiles/';
+var home = '/home/tom/';
 
-var locations = [
+var files = [
   { src: 'functions', dest: '.config/fish/functions' },
+  { src: 'dunst/dunstrc', dest: '.config/dunst/dunstrc' },
   { src: 'git/gitconfig', dest: '.gitconfig' },
+  { src: 'git/gitignore', dest: '.gitignore' },
   { src: 'vim', dest: '.vim' },
   { src: 'X/xbindkeysrc', dest: '.xbindkeysrc' },
-  { src: 'X/xinitrc', dest: '.xinitrc' }
+  { src: 'X/xinitrc', dest: '.xinitrc' },
+  { src: 'tmux/tmux.conf', dest: '.tmux.conf' }
 ];
 
-_.map(locations, function(location) {
-  var dest = destDir + location.dest;
-  var src = srcDir + location.src;
+files.map(function(file) {
+  var dest = path.join(home, file.dest);
+  var src = path.join(__dirname, file.src);
 
   rimraf(dest, function() {
     console.log('Removed ' + dest);

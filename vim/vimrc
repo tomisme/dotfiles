@@ -1,13 +1,13 @@
 " load any plugins in ~/.vim/bundle
 execute pathogen#infect()
 
-let mapleader = ","         " change <leader> command
 syntax enable               " use syntax highlighting
 filetype plugin indent on   " use filetype-specific indent options
-let g:netrw_dirhistmax = 0
+let g:netrw_dirhistmax = 0  " don't save .vim directory changes in .netrwhist
 
-set autoindent
-set nocompatible
+set autoindent              " copy indent from current line when starting a new line
+set nocompatible            " use Vim defaults, not vi
+set clipboard=unnamedplus   " use + flag with y and d (copy and paste using system keyboard)
 set nospell spelllang=en_au " don't highlight mispelled words by default
 set number                  " show line numbers
 set wildmenu                " visual autocomplete for command menu
@@ -20,21 +20,19 @@ set laststatus=2            " makes status lines display
 set tabstop=2               " number of visual spaces per TAB
 set softtabstop=2           " number of spaces in tab when editing
 set shiftwidth=2            " number of spaces to move when ussing >> << and ==
-set scrolljump=5            " when scrolling keep 5 lines above/below
 set history=3000            " keep 3000 lines of command line history
 set undolevels=1000         " 50 undos, saved in undodir
 set autoread                " watch for file changes
 set noshowmode              " don't show the mode, we have airline
 set writebackup             " create a backup of open files
+set foldmethod=indent       " fold code based on indent level
+set foldlevelstart=20       " open files with all folds open
+set ssop-=options           " do not store global and local values in a session file
+
 set backupdir=~/tmp/swapfiles//,/tmp//
 set directory=~/tmp/swapfiles//,/tmp//
-set foldmethod=syntax
 
-" stops folds from opening while in insert method
-autocmd InsertEnter * if !exists('w:last_fdm') | let w:last_fdm=&foldmethod | setlocal foldmethod=manual | endif
-autocmd InsertLeave,WinLeave * if exists('w:last_fdm') | let &l:foldmethod=w:last_fdm | unlet w:last_fdm | endif
-
-" airline
+" airline plugin
 let g:airline_powerline_fonts = 1
 
 " map Ctrl-movement to move between window splits

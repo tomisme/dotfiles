@@ -5,3 +5,6 @@
 	helper = cache --timeout 3600
 [push]
 	default = simple
+[core]
+	filemode = false
+	excludesfile = /home/tom/.gitignore
