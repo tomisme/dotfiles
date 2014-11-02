@@ -1,54 +1,53 @@
 " load any plugins in ~/.vim/bundle
 execute pathogen#infect()
 
-syntax enable               " use syntax highlighting
-filetype plugin indent on   " use filetype-specific indent options
-let g:netrw_dirhistmax = 0  " don't save .vim directory changes in .netrwhist
+syntax enable                 " use syntax highlighting
+filetype plugin indent on     " use filetype-specific indent options
+let g:netrw_dirhistmax = 0    " don't save .vim directory changes in .netrwhist
 
-set autoindent              " copy indent from current line when starting a new line
-set nocompatible            " use Vim defaults, not vi
-set clipboard=unnamedplus   " use + flag with y and d (copy and paste using system keyboard)
-set nospell spelllang=en_au " don't highlight mispelled words by default
-set number                  " show line numbers
-set wildmenu                " visual autocomplete for command menu
-set showmatch               " highlight matching [{()}]
-set incsearch               " search as characters are entered
-set ignorecase              " ignore case in search patterns
-set encoding=utf-8          " set how vim represents characters internally
-set expandtab               " tabs are spaces
-set laststatus=2            " makes status lines display
-set tabstop=2               " number of visual spaces per TAB
-set softtabstop=2           " number of spaces in tab when editing
-set shiftwidth=2            " number of spaces to move when ussing >> << and ==
-set history=3000            " keep 3000 lines of command line history
-set undolevels=1000         " 50 undos, saved in undodir
-set autoread                " watch for file changes
-set noshowmode              " don't show the mode, we have airline
-set writebackup             " create a backup of open files
-set foldmethod=indent       " fold code based on indent level
-set foldlevelstart=20       " open files with all folds open
-set ssop-=options           " do not store global and local values in a session file
+set autoindent                " copy indent from current line when starting a new line
+set nocompatible              " use Vim defaults, not vi
+set clipboard=unnamedplus     " use + flag with y and d (copy and paste using system keyboard)
+set nospell spelllang=en_au   " don't highlight mispelled words by default
+set number                    " show line numbers
+set wildmenu                  " visual autocomplete for command menu
+set showmatch                 " highlight matching [{()}]
+set incsearch                 " search as characters are entered
+set ignorecase                " ignore case in search patterns
+set encoding=utf-8            " set how vim represents characters internally
+set expandtab                 " tabs are spaces
+set laststatus=2              " makes status lines display
+set tabstop=2                 " number of visual spaces per TAB
+set softtabstop=2             " number of spaces in tab when editing
+set shiftwidth=2              " number of spaces to move when ussing >> << and ==
+set history=3000              " keep 3000 lines of command line history
+set undolevels=1000           " 50 undos, saved in undodir
+set autoread                  " watch for file changes
+set noshowmode                " don't show the mode, we have airline
+set writebackup               " create a backup of open files
+set foldmethod=indent         " fold code based on indent level
+set foldlevelstart=20         " open files with all folds open
+set ssop-=options             " do not store global and local values in a session file
+set hlsearch                  " highlight results after a search
 
 set backupdir=~/tmp/swapfiles//,/tmp//
 set directory=~/tmp/swapfiles//,/tmp//
 
-" airline plugin
-let g:airline_powerline_fonts = 1
+nmap \p :set paste!<CR>       " toggle paste mode
+nmap \l :setlocal number!<CR> " toggle line numbers
+nmap \h :nohlsearch<CR>       " remove search highlights
+nmap j gj                     " always move down a single visual line
+nmap k gk                     " always move up a single visual line
+nmap <C-n> :bnext<CR>         " go to next buffer
+nmap <C-p> :bprev<CR>         " go to previous buffer
 
 " map Ctrl-movement to move between window splits
-nnoremap <C-J> <C-W><C-J>
-nnoremap <C-K> <C-W><C-K>
-nnoremap <C-L> <C-W><C-L>
-nnoremap <C-H> <C-W><C-H>
+nnoremap <C-J> <C-W><C-J><C-W>_
+nnoremap <C-K> <C-W><C-K><C-W>_
+nnoremap <C-L> <C-W><C-L><C-W>_
+nnoremap <C-H> <C-W><C-H><C-W>_
 
-" arrow keys are for wusses
-nnoremap <up> <nop>
-nnoremap <down> <nop>
-nnoremap <left> <nop>
-nnoremap <right> <nop>
-inoremap <up> <nop>
-inoremap <down> <nop>
-inoremap <left> <nop>
-inoremap <right> <nop>
+" airline plugin
+let g:airline_powerline_fonts = 1
 
 colorscheme molokai

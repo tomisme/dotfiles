@@ -12,7 +12,8 @@ var files = [
   { src: 'vim', dest: '.vim' },
   { src: 'X/xbindkeysrc', dest: '.xbindkeysrc' },
   { src: 'X/xinitrc', dest: '.xinitrc' },
-  { src: 'tmux/tmux.conf', dest: '.tmux.conf' }
+  { src: 'tmux/tmux.conf', dest: '.tmux.conf' },
+  { src: 'dircolors/monokai', dest: '.dir_colors' }
 ];
 
 files.map(function(file) {

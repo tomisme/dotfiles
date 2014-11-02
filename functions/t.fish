@@ -1,3 +1,3 @@
 function t
-	tree -I node_modules $argv
+	tree -C -I node_modules $argv
 end
