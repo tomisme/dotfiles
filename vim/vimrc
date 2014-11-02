@@ -36,8 +36,6 @@ set directory=~/tmp/swapfiles//,/tmp//
 nmap \p :set paste!<CR>       " toggle paste mode
 nmap \l :setlocal number!<CR> " toggle line numbers
 nmap \h :nohlsearch<CR>       " remove search highlights
-nmap j gj                     " always move down a single visual line
-nmap k gk                     " always move up a single visual line
 nmap <C-n> :bnext<CR>         " go to next buffer
 nmap <C-p> :bprev<CR>         " go to previous buffer
 
