@@ -4,7 +4,7 @@ function check
     echo \n $file
     set_color normal
     cd $file
-    git status
+    gs
   end
   cd /home/tom/git
 end

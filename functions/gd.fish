@@ -1,3 +1,3 @@
 function gd
-	git diff $argv
+	git diff --word-diff $argv
 end

@@ -6,3 +6,9 @@
 
 "amixer set Master mute"
   XF86AudioMute
+
+"xbacklight -dec 10"
+  XF86MonBrightnessDown
+
+"xbacklight -inc 10"
+  XF86MonBrightnessUp
