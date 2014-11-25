@@ -10,7 +10,7 @@ xbindkeys
 setxkbmap -option caps:escape
 
 # start tiddlywiki server
-tiddlywiki /home/tom/wiki --server 5098 &
+tiddlywiki /home/tom/sync/wiki --server 5098 &
 
 # start redshift
 redshift -l -31:116 &

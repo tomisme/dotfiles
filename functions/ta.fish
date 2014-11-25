@@ -1,3 +1,3 @@
 function ta
-	tmux attach
+	tmux attach -t $argv
 end
