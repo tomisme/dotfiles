@@ -13,7 +13,6 @@
   },
   "homepage": "https://github.com/tomisme/dotfiles",
   "dependencies": {
-    "lodash": "^2.4.1",
     "rimraf": "^2.2.8"
   }
 }

@@ -5,7 +5,8 @@ var path = require('path');
 var home = '/home/tom/';
 
 var files = [
-  { src: 'functions', dest: '.config/fish/functions' },
+  { src: 'fish/functions', dest: '.config/fish/functions' },
+  { src: 'fish/config.fish', dest: '.config/fish/config.fish' },
   { src: 'dunst/dunstrc', dest: '.config/dunst/dunstrc' },
   { src: 'git/gitconfig', dest: '.gitconfig' },
   { src: 'git/gitignore', dest: '.gitignore' },
