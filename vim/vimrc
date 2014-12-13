@@ -23,10 +23,10 @@ set laststatus=2              " makes status lines display
 set tabstop=2                 " number of visual spaces per TAB
 set softtabstop=2             " number of spaces in tab when editing
 set shiftwidth=2              " number of spaces to move when ussing >> << and ==
-set history=3000              " keep 3000 lines of command line history
-set undolevels=1000           " 50 undos, saved in undodir
+set history=3000              " keep a lot command line history
+set undolevels=1000           " set maximum amount of undos
 set autoread                  " watch for file changes
-set noshowmode                " don't show the mode, we have airline
+set noshowmode                " don't show the mode, we have powerline
 set writebackup               " create a backup of open files
 set foldmethod=indent         " fold code based on indent level
 set foldlevelstart=20         " open files with all folds open
@@ -38,14 +38,22 @@ set directory=~/tmp/swapfiles//,/tmp//
 
 nmap \p :set paste!<CR>       " toggle paste mode
 nmap \l :setlocal number!<CR> " toggle line numbers
-nmap \h :nohlsearch<CR>       " remove search highlights
+nmap \h :nohlsearch<CR>       " remove highlights
 nmap <C-n> :bnext<CR>         " go to next buffer
 nmap <C-p> :bprev<CR>         " go to previous buffer
 
-" map Ctrl-movement to move between window splits
-nnoremap <C-J> <C-W><C-J><C-W>_
-nnoremap <C-K> <C-W><C-K><C-W>_
-nnoremap <C-L> <C-W><C-L><C-W>_
-nnoremap <C-H> <C-W><C-H><C-W>_
+" move multiple lines with ctrl-movement
+nnoremap <C-j> 5j
+nnoremap <C-k> 5k
+xnoremap <C-j> 5j
+xnoremap <C-k> 5k
+
+" increase indent of selection with tab
+vnoremap <Tab> >gv
+vnoremap <S-Tab> <LT>gv
+
+" move selection with J and K 
+vnoremap J :m '>+1<CR>gv=gv
+vnoremap K :m '<-2<CR>gv=gv
 
 colorscheme molokai
