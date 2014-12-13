@@ -1,6 +1,9 @@
 " load any plugins in ~/.vim/bundle
 execute pathogen#infect()
 
+" fix python so powerline works
+let $PYTHONPATH="/usr/lib/python3.4/site-packages"
+
 syntax enable                 " use syntax highlighting
 filetype plugin indent on     " use filetype-specific indent options
 let g:netrw_dirhistmax = 0    " don't save .vim directory changes in .netrwhist
@@ -44,8 +47,5 @@ nnoremap <C-J> <C-W><C-J><C-W>_
 nnoremap <C-K> <C-W><C-K><C-W>_
 nnoremap <C-L> <C-W><C-L><C-W>_
 nnoremap <C-H> <C-W><C-H><C-W>_
-
-" airline plugin
-let g:airline_powerline_fonts = 1
 
 colorscheme molokai

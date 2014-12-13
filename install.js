@@ -14,7 +14,8 @@ var files = [
   { src: 'X/xbindkeysrc', dest: '.xbindkeysrc' },
   { src: 'X/xinitrc', dest: '.xinitrc' },
   { src: 'tmux/tmux.conf', dest: '.tmux.conf' },
-  { src: 'dircolors/monokai', dest: '.dir_colors' }
+  { src: 'dircolors/monokai', dest: '.dir_colors' },
+  { src: 'fonts', dest: '.fonts' }
 ];
 
 files.map(function(file) {
