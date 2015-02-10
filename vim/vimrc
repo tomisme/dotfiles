@@ -12,7 +12,8 @@ set autoindent                " copy indent from current line when starting a ne
 set nocompatible              " use Vim defaults, not vi
 set clipboard=unnamedplus     " use + flag with y and d (copy and paste using system keyboard)
 set nospell spelllang=en_au   " don't highlight mispelled words by default
-set number                    " show line numbers
+set relativenumber            " show relative line numbers
+set number                    " show absolute line number of current line
 set wildmenu                  " visual autocomplete for command menu
 set showmatch                 " highlight matching [{()}]
 set incsearch                 " search as characters are entered
