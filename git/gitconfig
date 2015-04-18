@@ -8,3 +8,4 @@
 [core]
 	filemode = false
 	excludesfile = /home/tom/.gitignore
+	editor = atom --wait
