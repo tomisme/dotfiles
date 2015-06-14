@@ -1,1 +1,4 @@
 'ctrl-f': 'native!'
+
+'atom-text-editor.vim-mode:not(.insert-mode)':
+  'ctrl-f': 'native!'
