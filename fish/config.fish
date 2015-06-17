@@ -1,4 +1,4 @@
-set --universal fish_user_paths $fish_user_paths ~/bin/ 
+set --universal fish_user_paths $fish_user_paths ~/bin/ ~/.npm/bin/
 
 function fish_prompt --description 'Write out the prompt'
 	if not set -q __fish_prompt_hostname
@@ -104,3 +104,4 @@ end
 function v
 	vim $argv
 end
+
