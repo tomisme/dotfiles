@@ -5,7 +5,13 @@ function fish_prompt --description 'Write out the prompt'
     set -g __fish_prompt_hostname (hostname|cut -d . -f 1)
   end
 
-  printf '\n\u250C\u2500\u2500 %s%s %s%s@%s %s%s %s%s \f\r\u2514\u2500\u25B6 ' \
+	# if current directory is a git repo, show git branch
+	if git status >/dev/null ^/dev/null
+	  set git_branch_name (git branch | grep '*' | cut -c3-)
+		set git_branch (printf '(%s)' $git_branch_name)
+	end
+
+  printf '\n\u250C\u2500\u2500 %s%s %s%s@%s %s%s %s%s %s\f\r\u2514\u2500\u25B6 ' \
     (set_color yellow) \
     (date "+%H:%M") \
     (set_color blue) \
@@ -13,7 +19,8 @@ function fish_prompt --description 'Write out the prompt'
     $__fish_prompt_hostname \
     (set_color $fish_color_cwd) \
     (prompt_pwd) \
-    (set_color normal)
+    (set_color normal) \
+    $git_branch
 end
 
 function check
@@ -104,4 +111,3 @@ end
 function v
 	vim $argv
 end
-
