@@ -1,5 +1,12 @@
 set --universal fish_user_paths $fish_user_paths ~/bin/ ~/.npm/bin/
 
+function header
+	set_color yellow
+	printf $argv
+	set_color normal
+	printf "\n\n"
+end
+
 function fish_prompt --description 'Write out the prompt'
 	if not set -q __fish_prompt_hostname
     set -g __fish_prompt_hostname (hostname|cut -d . -f 1)
@@ -42,7 +49,11 @@ function du2
 end
 
 function fish_greeting
-	fortune
+	cat ~/git/dotfiles/fish/greeting.txt
+end
+
+function g
+	cat ~/git/dotfiles/fish/g.txt
 end
 
 function ga
@@ -62,14 +73,17 @@ function gi
 end
 
 function gl
+	header "THOSE GUYS ARE INSIDE YOU BUILDING A PIECE OF SHIT ETHAN!!\nTHEY'RE INSIDE YOU BUILDING A MONUMENT TO COMPROMISE!!\nfuck them... fuck those people... fuck this whole thing ETHAN."
 	git log $argv
 end
 
 function gp
+	header "It's a figure of speech, Morty! They're bureaucrats! I don't respect them.\nJust keep shooting, Morty! You have no idea what prison is like here!"
 	git push $argv
 end
 
 function gs
+	header "Where are my testicles, Summer?"
 	git status -sb $argv
 end
 
