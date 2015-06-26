@@ -31,6 +31,7 @@ function check
     cd $file
     gs
   end
+  cd /home/tom/git
 end
 
 function du1
