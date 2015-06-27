@@ -34,25 +34,6 @@ function fish_greeting
 	cat ~/git/dotfiles/fish/greeting.txt
 end
 
-function check
-	for file in /home/tom/git/*
-    set_color yellow
-    echo \n $file
-    set_color normal
-    cd $file
-    gs
-  end
-  cd /home/tom/git
-end
-
-function du1
-	du -h --max-depth 0 * | sort -h
-end
-
-function du2
-	du -h --max-depth 1 * | sort -h
-end
-
 function git-commands
 	cat ~/git/dotfiles/fish/g.txt
 end
@@ -107,9 +88,12 @@ function q
 	exit
 end
 
-function search
-	aura -As $argv
-	aura -Ss $argv
+function du1
+	du -h --max-depth 0 * | sort -h
+end
+
+function du2
+	du -h --max-depth 1 * | sort -h
 end
 
 function secrets
