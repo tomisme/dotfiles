@@ -34,6 +34,17 @@ function fish_greeting
 	cat ~/git/dotfiles/fish/greeting.txt
 end
 
+function check
+	for file in /home/tom/git/*
+    set_color yellow
+    echo \n $file
+    set_color normal
+    cd $file
+    gs
+  end
+  cd /home/tom/git
+end
+
 function du1
 	du -h --max-depth 0 * | sort -h
 end
