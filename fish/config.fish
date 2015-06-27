@@ -30,14 +30,8 @@ function fish_prompt --description 'Write out the prompt'
     $git_branch
 end
 
-function check
-	for file in /home/tom/git/*
-    set_color yellow
-    echo \n $file
-    set_color normal
-    cd $file
-    gs
-  end
+function fish_greeting
+	cat ~/git/dotfiles/fish/greeting.txt
 end
 
 function du1
@@ -48,27 +42,38 @@ function du2
 	du -h --max-depth 1 * | sort -h
 end
 
-function fish_greeting
-	cat ~/git/dotfiles/fish/greeting.txt
-end
-
-function g
+function git-commands
 	cat ~/git/dotfiles/fish/g.txt
 end
 
+function git-check
+	for file in /home/tom/git/*
+    set_color yellow
+    echo \n $file
+    set_color normal
+    cd $file
+    gs
+  end
+	cd /home/tom/git
+end
+
 function ga
+	header "Snuffles was my slave name"
 	git add $argv
 end
 
 function gc
+	header "I don't like it here Morty. I can't abide bureaucracy. I don't like being told where to go and what to do. I consider it a violation. Did you get those seeds all the way up your butt?"
 	git commit $argv
 end
 
 function gd
+	header "You're not gonna believe this, because it usually never happens, but I made a mistake"
 	git diff --word-diff $argv
 end
 
 function gi
+	header "25 shmeckles? I-I-I-I don't even know what that- what is that? Is that a lot?"
 	curl -L -s https://www.gitignore.io/api/$argv
 end
 
