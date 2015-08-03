@@ -1,13 +1,42 @@
 set --universal fish_user_paths $fish_user_paths ~/bin/ ~/.npm/bin/
 
+fish_vi_mode
+
+function reload
+  source ~/.config/fish/config.fish
+end
+
 function header
-	set_color yellow
+	set_color -b cyan -o black
 	printf $argv
 	set_color normal
 	printf "\n\n"
 end
 
-function fish_prompt --description 'Write out the prompt'
+function fish_prompt
+end
+
+function fish_mode_prompt --description 'Displays the current mode'
+  printf '\n\u250C\u2500\u2500 ' # newline gets lost, hopefully changes upstream
+  if set -q __fish_vi_mode
+    switch $fish_bind_mode
+      case default
+        set_color --bold --background red white
+        printf 'Normal'
+      case insert
+        set_color --bold --background green white
+        printf 'Insert'
+      case visual
+        set_color --bold --background magenta white
+        printf 'Visual'
+    end
+    set_color normal
+		prompt
+  end
+end
+
+
+function prompt
 	if not set -q __fish_prompt_hostname
     set -g __fish_prompt_hostname (hostname|cut -d . -f 1)
   end
@@ -18,7 +47,7 @@ function fish_prompt --description 'Write out the prompt'
 		set git_branch (printf '(%s)' $git_branch_name)
 	end
 
-  printf '\n\u250C\u2500\u2500 %s%s %s%s@%s %s%s %s%s %s\f\r\u2514\u2500\u25B6 ' \
+  printf ' %s%s %s%s@%s %s%s %s%s %s\f\r\u2514\u2500\u25B6 ' \
     (set_color yellow) \
     (date "+%H:%M") \
     (set_color blue) \
@@ -34,16 +63,12 @@ function fish_greeting
 	cat ~/git/dotfiles/fish/greeting.txt
 end
 
-function git-commands
-	cat ~/git/dotfiles/fish/g.txt
-end
-
 function git-check
 	for file in /home/tom/git/*
+    cd $file
     set_color yellow
     echo \n $file
     set_color normal
-    cd $file
     gs
   end
 	cd /home/tom/git
@@ -55,7 +80,6 @@ function ga
 end
 
 function gc
-	header "I don't like it here Morty. I can't abide bureaucracy. I don't like being told where to go and what to do. I consider it a violation. Did you get those seeds all the way up your butt?"
 	git commit $argv
 end
 
