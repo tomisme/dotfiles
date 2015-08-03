@@ -70,12 +70,11 @@ function gi
 end
 
 function gl
-	header "THOSE GUYS ARE INSIDE YOU BUILDING A PIECE OF SHIT ETHAN!!\nTHEY'RE INSIDE YOU BUILDING A MONUMENT TO COMPROMISE!!\nfuck them... fuck those people... fuck this whole thing ETHAN."
-	git log $argv
+git log --format='%Cred%h%Creset %s %Cgreen(%cr) %C(blue)<%an>%Creset%C(yellow)%d%Creset' $argv
 end
 
 function gp
-	header "It's a figure of speech, Morty! They're bureaucrats! I don't respect them.\nJust keep shooting, Morty! You have no idea what prison is like here!"
+	header "THOSE GUYS ARE INSIDE YOU BUILDING A PIECE OF SHIT ETHAN!!\nTHEY'RE INSIDE YOU BUILDING A MONUMENT TO COMPROMISE!!\nfuck them... fuck those people... fuck this whole thing ETHAN."
 	git push $argv
 end
 
