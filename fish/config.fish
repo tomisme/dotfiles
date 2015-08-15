@@ -2,7 +2,14 @@ set --universal fish_user_paths $fish_user_paths ~/bin/ ~/.npm/bin/
 
 fish_vi_mode
 
+alias q "exit"
+alias v "vim"
+alias l "ll"
+alias r "ranger"
+alias ya "yaourt"
+
 function reload
+  clear
   source ~/.config/fish/config.fish
 end
 
@@ -40,20 +47,15 @@ function fish_prompt
       set git_branch_name (git branch | grep '*' | cut -c3-)
       set git_branch (printf '(%s)' $git_branch_name)
     end
-    printf ' %s%s %s%s@%s %s%s %s%s %s\f\r\u2514\u2500\u25B6 ' \
+    printf ' %s%s %s%s %s%s %s%s %s\f\r\u2514\u2500\u25B6 ' \
       (set_color yellow) \
       (date "+%H:%M") \
       (set_color blue) \
       $USER \
-      $__fish_prompt_hostname \
       (set_color $fish_color_cwd) \
       (prompt_pwd) \
       (set_color normal) \
       $git_branch
-end
-
-
-function prompt
 end
 
 function fish_greeting
@@ -66,7 +68,7 @@ function git-check
     set_color yellow
     echo \n $file
     set_color normal
-    gs
+    git status -sb
   end
 	cd /home/tom/git
 end
@@ -91,7 +93,7 @@ function gi
 end
 
 function gl
-git log --format='%Cred%h%Creset %s %Cgreen(%cr) %C(blue)<%an>%Creset%C(yellow)%d%Creset' $argv
+  git log --format='%Cred%h%Creset %s %Cgreen(%cr) %C(blue)<%an>%Creset%C(yellow)%d%Creset' $argv
 end
 
 function gp
@@ -102,10 +104,6 @@ end
 function gs
 	header "Where are my testicles, Summer?"
 	git status -sb $argv
-end
-
-function q
-	exit
 end
 
 function du1
@@ -140,8 +138,4 @@ end
 
 function t3
 	t -L 3 $argv
-end
-
-function v
-	vim $argv
 end
