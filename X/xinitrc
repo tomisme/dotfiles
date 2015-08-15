@@ -1,21 +1,7 @@
-#!/bin/sh
+#!/bin/bash
 
-# start dwm status bar
-dwmstatus.fish &
-
-# set up extra keybindings (volume, etc.) 
-xbindkeys
-
-# remap escape on top of capslock
 setxkbmap -option caps:escape
 
-# start tiddlywiki server
-tiddlywiki /home/tom/sync/wiki --server 5098 &
-
-# start redshift
 redshift -l -31:116 &
 
-# start chromium in the backround
 chromium --no-startup-window &
-
-exec dwm
