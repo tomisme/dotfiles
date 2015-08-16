@@ -1,0 +1,30 @@
+"*":
+  "exception-reporting":
+    userId: "1adfac22-4a00-fb5b-f775-976cdc7ccef0"
+  welcome:
+    showOnStartup: false
+  core:
+    themes: [
+      "seti-ui"
+      "seti-monokai"
+    ]
+    disabledPackages: [
+      "go-to-line"
+      "imdone-atom"
+    ]
+    autoHideMenuBar: true
+  editor:
+    invisibles: {}
+    fontSize: 13
+    backUpBeforeSaving: true
+    preferredLineLength: 100
+  "vim-mode":
+    useClipboardAsDefaultRegister: true
+  linter: {}
+  "git-diff":
+    showIconsInEditorGutter: true
+  "autocomplete-plus":
+    confirmCompletion: "tab"
+  "merge-conflicts": {}
+  minimap:
+    absoluteMode: true
