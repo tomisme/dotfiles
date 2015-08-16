@@ -1,4 +1,7 @@
-set --universal fish_user_paths $fish_user_paths ~/bin/ ~/.npm/bin/
+set -U fish_user_paths $fish_user_paths ~/bin/ ~/.npm/bin/
+set -xU VISUAL "/user/bin/vim"
+set -xU EDITOR "/user/bin/vim"
+set -xU BROWSER "/user/bin/chromium"
 
 fish_vi_mode
 
