@@ -1,6 +1,8 @@
 '.editor[data-grammar="source clojure"]:not(.autocomplete-active):not(.insert-mode)':
   '[': 'paredit:backwardSexp'
   ']': 'paredit:forwardSexp'
+  '{': 'vim-mode:move-to-previous-paragraph'
+  '}': 'vim-mode:move-to-next-paragraph'
 
 'atom-text-editor.vim-mode.insert-mode':
   'ctrl-e': 'expose:toggle'
@@ -9,5 +11,3 @@
   'ctrl-f': 'unset!'
   'ctrl-e': 'expose:toggle'
   'ctrl-t': 'fuzzy-finder:toggle-file-finder'
-  '}': 'vim-mode:move-to-next-paragraph'
-  '{': 'vim-mode:move-to-previous-paragraph'

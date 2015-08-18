@@ -10,7 +10,6 @@
     ]
     disabledPackages: [
       "go-to-line"
-      "imdone-atom"
     ]
     autoHideMenuBar: true
   editor:
@@ -28,3 +27,5 @@
   "merge-conflicts": {}
   minimap:
     absoluteMode: true
+  "git-projects":
+    rootPath: "/home/tom/git"
