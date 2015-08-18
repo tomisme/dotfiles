@@ -4,10 +4,10 @@
   '{': 'vim-mode:move-to-previous-paragraph'
   '}': 'vim-mode:move-to-next-paragraph'
 
-'atom-text-editor.vim-mode.insert-mode':
-  'ctrl-e': 'expose:toggle'
-
 'atom-text-editor.vim-mode:not(.insert-mode)':
   'ctrl-f': 'unset!'
   'ctrl-e': 'expose:toggle'
   'ctrl-t': 'fuzzy-finder:toggle-file-finder'
+
+'.platform-linux':
+  'ctrl-p': 'command-palette:toggle'

@@ -1,7 +1,7 @@
 set -U fish_user_paths $fish_user_paths ~/bin/ ~/.npm/bin/
-set -xU VISUAL "/user/bin/vim"
-set -xU EDITOR "/user/bin/vim"
-set -xU BROWSER "/user/bin/chromium"
+set -xg VISUAL "/user/bin/vim"
+set -xg EDITOR "/user/bin/vim"
+set -xg BROWSER "/user/bin/chromium"
 
 fish_vi_mode
 
@@ -21,6 +21,10 @@ function header
 	printf $argv
 	set_color normal
 	printf "\n\n"
+end
+
+function fish_greeting
+	cat ~/git/dotfiles/fish/greeting.txt
 end
 
 function fish_mode_prompt
@@ -61,8 +65,12 @@ function fish_prompt
       $git_branch
 end
 
-function fish_greeting
-	cat ~/git/dotfiles/fish/greeting.txt
+function atom-backup
+  apm list --installed --bare > ~/git/dotfiles/atom/packages.list
+end
+
+function atom-reset
+  apm install --packages-file ~/git/dotfiles/atom/packages.list
 end
 
 function git-check
