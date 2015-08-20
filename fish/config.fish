@@ -9,7 +9,7 @@ alias q "exit"
 alias v "vim"
 alias l "ll"
 alias r "ranger"
-alias ya "yaourt"
+alias y "yaourt"
 
 function reload
   clear
@@ -73,17 +73,6 @@ function atom-reset
   apm install --packages-file ~/git/dotfiles/atom/packages.list
 end
 
-function git-check
-	for file in /home/tom/git/*
-    cd $file
-    set_color yellow
-    echo \n $file
-    set_color normal
-    git status -sb
-  end
-	cd /home/tom/git
-end
-
 function ga
 	header "Snuffles was my slave name"
 	git add $argv
@@ -126,6 +115,7 @@ function du2
 end
 
 function secrets
+  echo "Turning off swap in order to safely open tomb"
 	sudo swapoff -a
 	tomb open secrets.tomb -k secrets.tomb.key
 end
