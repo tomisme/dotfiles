@@ -1,0 +1,20 @@
+'.source.clojure':
+  'reagent div':
+    'prefix': 'div'
+    'body': '[:div {:class "$1"} $2]'
+  're-frame handler':
+    'prefix': 'rehandle'
+    'body': """
+      (register-handler
+        :${1:event}
+        (fn [db ${2:_}]
+          ${3:db}))
+    """
+  're-frame sub':
+    'prefix': 'resub'
+    'body': """
+      (register-sub
+        :${1:key}
+        (fn [db ${2:_}]
+          (reaction ($3))))
+    """
