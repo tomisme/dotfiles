@@ -1,24 +1,21 @@
+# overwrite paredit
 '.editor[data-grammar="source clojure"]:not(.autocomplete-active):not(.insert-mode)':
-  '[': 'paredit:backwardSexp'
-  ']': 'paredit:forwardSexp'
   '{': 'vim-mode:move-to-previous-paragraph'
   '}': 'vim-mode:move-to-next-paragraph'
 
-# overwrite paredit tab when in insert mode
+# overwrite paredit
 '.editor[data-grammar="source clojure"]:not(.autocomplete-active).insert-mode':
   'tab':'snippets:next-tab-stop'
 
-# snippets seem to expand straight from autocomplete menu now...
-# '.insert-mode':
-#   'tab': 'snippets:expand'
-
+# overwrite vim-mode
 'atom-text-editor.vim-mode:not(.insert-mode)':
   'ctrl-f': 'unset!'
   'ctrl-e': 'expose:toggle'
   'ctrl-t': 'fuzzy-finder:toggle-file-finder'
 
+# normal bind is 'ctrl-P'
 '.platform-linux':
   'ctrl-p': 'command-palette:toggle'
 
-'atom-workspace atom-text-editor':
-  'ctrl-alt-o': 'git-projects:toggle'
+#'atom-workspace atom-text-editor':
+#  'ctrl-alt-o': 'git-projects:toggle'
