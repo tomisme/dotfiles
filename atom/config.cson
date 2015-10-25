@@ -14,9 +14,9 @@
     autoHideMenuBar: true
   editor:
     invisibles: {}
-    fontSize: 13
     backUpBeforeSaving: true
     preferredLineLength: 100
+    fontSize: 13
   "vim-mode":
     useClipboardAsDefaultRegister: true
   linter: {}
