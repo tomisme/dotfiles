@@ -10,6 +10,7 @@
     ]
     disabledPackages: [
       "go-to-line"
+      "linter-clojure"
     ]
     autoHideMenuBar: true
   editor:
@@ -19,7 +20,9 @@
     fontSize: 13
   "vim-mode":
     useClipboardAsDefaultRegister: true
-  linter: {}
+  linter:
+    errorPanelHeight: 22
+    ignoreMatchedFiles: "project.clj"
   "git-diff":
     showIconsInEditorGutter: true
   "autocomplete-plus":
@@ -29,3 +32,6 @@
     absoluteMode: true
   "git-projects":
     rootPath: "/home/tom/git"
+  "linter-clojure":
+    clojureExecutablePath: "/usr/share/clojure/clojure.jar"
+    javaExecutablePath: "/usr/bin/java"

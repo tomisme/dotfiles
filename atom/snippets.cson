@@ -1,13 +1,4 @@
 '.source.clojure':
-  'reagent devcard':
-    'prefix': 'rdev'
-    'body': """
-      (defcard $1
-        (dc/reagent
-         (fn [data _]
-           [$2]))
-        )
-    """
   'reagent div':
     'prefix': 'div'
     'body': '[:div {:class "$1"} $2]'

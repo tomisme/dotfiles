@@ -1,12 +1,13 @@
 atom-paredit@0.2.0
-git-diff-details@0.20.0
+git-diff-details@0.21.0
 git-history@3.1.0
 git-plus@5.4.7
 git-projects@1.15.0
 language-fish-shell@1.0.2
+linter@1.10.0
+linter-clojure@1.0.0
 nrepl@0.4.0
 seti-monokai@0.3.1
 seti-syntax@0.4.0
 seti-ui@0.8.0
-vim-mode@0.60.0
-
+vim-mode@0.62.0
