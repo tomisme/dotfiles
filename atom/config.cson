@@ -35,3 +35,5 @@
   "linter-clojure":
     clojureExecutablePath: "/usr/share/clojure/clojure.jar"
     javaExecutablePath: "/usr/bin/java"
+  "linter-htmlhint": {}
+  "git-history": {}
