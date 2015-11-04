@@ -114,29 +114,23 @@ function du2
 	du -h --max-depth 1 * | sort -h
 end
 
-function secrets
-  echo "Turning off swap in order to safely open tomb"
-	sudo swapoff -a
-	tomb open secrets.tomb -k secrets.tomb.key
-end
-
 function su
 	/bin/su --shell=/usr/bin/fish $argv
 end
 
-function t
+function clear-tree
 	clear
 	tree -C -I node_modules $argv
 end
 
-function t1
-	t -L 1 $argv
+function t
+	clear-tree -L 1 $argv
 end
 
 function t2
-	t -L 2 $argv
+	clear-tree -L 2 $argv
 end
 
 function t3
-	t -L 3 $argv
+	clear-tree -L 3 $argv
 end
