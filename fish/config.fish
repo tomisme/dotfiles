@@ -82,6 +82,11 @@ function gc
 	git commit $argv
 end
 
+function gca
+  header "God? God's turning people into insect monsters Beth. I'm the one beating them to death. Thank me."
+  git add .; and git commit -m $argv
+end
+
 function gd
 	header "You're not gonna believe this, because it usually never happens, but I made a mistake"
 	git diff --word-diff $argv

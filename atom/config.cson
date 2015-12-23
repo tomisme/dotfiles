@@ -10,18 +10,19 @@
     ]
     disabledPackages: [
       "go-to-line"
+      "linter-clojure"
     ]
     autoHideMenuBar: true
   editor:
     invisibles: {}
     backUpBeforeSaving: true
     preferredLineLength: 100
-    fontSize: 13
   "vim-mode":
     useClipboardAsDefaultRegister: true
   linter:
     errorPanelHeight: 22
     ignoreMatchedFiles: "project.clj"
+    showErrorPanel: false
   "git-diff":
     showIconsInEditorGutter: true
   "autocomplete-plus":
@@ -31,3 +32,10 @@
   "linter-clojure":
     clojureExecutablePath: "/usr/share/clojure/clojure.jar"
     javaExecutablePath: "/usr/bin/java"
+  "git-plus": {}
+".fountain.source":
+  editor:
+    preferredLineLength: 100
+".diff.source":
+  editor:
+    preferredLineLength: 100
