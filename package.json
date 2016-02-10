@@ -1,11 +1,4 @@
 {
-  "name": "dotfiles",
-  "version": "1.0.0",
-  "description": "Tom's dotfiles",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/tomisme/dotfiles.git"
-  },
   "dependencies": {
     "rimraf": "^2.2.8"
   }

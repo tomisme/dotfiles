@@ -8,15 +8,12 @@ const HOME = '/home/tom/';
 
 const files = [
   { src: 'atom/keymap.cson', dest: '.atom/keymap.cson' },
-  { src: 'atom/styles.less', dest: '.atom/styles.less' },
+  { src: 'atom/snippets.cson', dest: '.atom/snippets.cson' },
   { src: 'fish/config.fish', dest: '.config/fish/config.fish' },
   { src: 'git/gitconfig', dest: '.gitconfig' },
   { src: 'git/gitignore', dest: '.gitignore' },
-  { src: 'tmux/tmux.conf', dest: '.tmux.conf' },
   { src: 'vim', dest: '.vim' },
-  { src: 'X/xbindkeysrc', dest: '.xbindkeysrc' },
   { src: 'X/xinitrc', dest: '.xinitrc' },
-  { src: 'fonts', dest: '.fonts' }
 ];
 
 files.map(function(file) {

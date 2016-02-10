@@ -1,21 +1,5 @@
-# overwrite paredit
-'.editor[data-grammar="source clojure"]:not(.autocomplete-active):not(.insert-mode)':
-  '{': 'vim-mode:move-to-previous-paragraph'
-  '}': 'vim-mode:move-to-next-paragraph'
-
-# overwrite paredit
-'.editor[data-grammar="source clojure"]:not(.autocomplete-active).insert-mode':
-  'tab':'snippets:next-tab-stop'
-
 # overwrite vim-mode
 'atom-text-editor.vim-mode:not(.insert-mode)':
   'ctrl-f': 'unset!'
   'ctrl-e': 'expose:toggle'
   'ctrl-t': 'fuzzy-finder:toggle-file-finder'
-
-# normal bind is 'ctrl-P'
-'.platform-linux':
-  'ctrl-p': 'command-palette:toggle'
-
-#'atom-workspace atom-text-editor':
-#  'ctrl-alt-o': 'git-projects:toggle'
