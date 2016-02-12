@@ -3,3 +3,4 @@
   'ctrl-f': 'unset!'
   'ctrl-e': 'expose:toggle'
   'ctrl-t': 'fuzzy-finder:toggle-file-finder'
+  'ctrl-w': 'core:close'

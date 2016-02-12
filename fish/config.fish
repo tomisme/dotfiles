@@ -1,4 +1,4 @@
-set -U fish_user_paths $fish_user_paths ~/bin/ ~/.npm/bin/
+set -U fish_user_paths $fish_user_paths ~/bin/ ~/.npm-packages/bin/
 set -xg VISUAL "/user/bin/vim"
 set -xg EDITOR "/user/bin/vim"
 set -xg BROWSER "/user/bin/chromium"

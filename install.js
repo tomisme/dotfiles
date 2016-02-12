@@ -14,6 +14,7 @@ const files = [
   { src: 'git/gitignore', dest: '.gitignore' },
   { src: 'vim', dest: '.vim' },
   { src: 'X/xinitrc', dest: '.xinitrc' },
+  { src: 'npm/npmrc', dest: '.npmrc'}
 ];
 
 files.map(function(file) {
