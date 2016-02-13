@@ -8,8 +8,6 @@ fish_vi_mode
 alias q "exit"
 alias v "vim"
 alias l "ll"
-alias r "ranger"
-alias y "yaourt"
 
 function reload
   clear

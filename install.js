@@ -9,6 +9,7 @@ const HOME = '/home/tom/';
 const files = [
   { src: 'atom/snippets.cson', dest: '.atom/snippets.cson' },
   { src: 'atom/keymap.cson',   dest: '.atom/keymap.cson' },
+  { src: 'atom/config.cson',   dest: '.atom/config.cson' },
   { src: 'fish/config.fish',   dest: '.config/fish/config.fish' },
   { src: 'git/gitconfig',      dest: '.gitconfig' },
   { src: 'git/gitignore',      dest: '.gitignore' },

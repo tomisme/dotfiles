@@ -1,41 +1,10 @@
 "*":
-  "exception-reporting":
-    userId: "1adfac22-4a00-fb5b-f775-976cdc7ccef0"
-  welcome:
-    showOnStartup: false
   core:
-    themes: [
-      "seti-ui"
-      "seti-monokai"
-    ]
-    disabledPackages: [
-      "go-to-line"
-      "linter-clojure"
-    ]
     autoHideMenuBar: true
   editor:
+    fontSize: 15
     invisibles: {}
-    backUpBeforeSaving: true
-    preferredLineLength: 100
-  "vim-mode":
-    useClipboardAsDefaultRegister: true
-  linter:
-    errorPanelHeight: 22
-    ignoreMatchedFiles: "project.clj"
-    showErrorPanel: false
-  "git-diff":
-    showIconsInEditorGutter: true
-  "autocomplete-plus":
-    confirmCompletion: "tab"
-  "git-projects":
-    rootPath: "/home/tom/git"
-  "linter-clojure":
-    clojureExecutablePath: "/usr/share/clojure/clojure.jar"
-    javaExecutablePath: "/usr/bin/java"
-  "git-plus": {}
-".fountain.source":
-  editor:
-    preferredLineLength: 100
-".diff.source":
-  editor:
-    preferredLineLength: 100
+  "exception-reporting":
+    userId: "e8922014-8094-c06b-1359-db2ec716cbc0"
+  welcome:
+    showOnStartup: false
