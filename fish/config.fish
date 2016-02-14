@@ -72,17 +72,22 @@ function atom-reset
 end
 
 function ga
-	header "Snuffles was my slave name"
+	header "What, so everyone's supposed to sleep every single night now? Y-you realize that nighttime makes up half of all time?"
 	git add $argv
+end
+
+function gb
+  header "This is why you don't freeze time, you guys. It's incredibly irresponsible."
+  git checkout -b $argv
+end
+
+function gba
+	header "Where are my testicles, Summer?"
+  git branch -av
 end
 
 function gc
 	git commit $argv
-end
-
-function gca
-  header "God? God's turning people into insect monsters Beth. I'm the one beating them to death. Thank me."
-  git add .; and git commit -m $argv
 end
 
 function gd
@@ -105,7 +110,7 @@ function gp
 end
 
 function gs
-	header "Where are my testicles, Summer?"
+  header "All right, everything resolved? Everybody nice and certain about their position in my world?"
 	git status -sb $argv
 end
 
