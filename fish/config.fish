@@ -8,6 +8,7 @@ fish_vi_mode
 alias q "exit"
 alias v "vim"
 alias l "ll"
+alias h "how2"
 
 function reload
   clear
