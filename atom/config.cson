@@ -1,10 +1,17 @@
 "*":
+  "autocomplete-plus": {}
   core:
     autoHideMenuBar: true
+    disabledPackages: [
+      "proto-repl"
+    ]
+  "cursor-history": {}
   editor:
-    fontSize: 15
     invisibles: {}
+    nonWordCharacters: "(){}[]\\\"',;<>~#$%^&*|+=`…"
   "exception-reporting":
     userId: "e8922014-8094-c06b-1359-db2ec716cbc0"
+  "tree-view":
+    hideVcsIgnoredFiles: true
   welcome:
     showOnStartup: false
