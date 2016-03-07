@@ -4,3 +4,16 @@
   'ctrl-e': 'expose:toggle'
   'ctrl-t': 'fuzzy-finder:toggle-file-finder'
   'ctrl-w': 'core:close'
+  'ctrl-]': 'cursor-history:next'
+  'ctrl-[': 'cursor-history:prev'
+  'ctrl-}': 'cursor-history:next-within-editor'
+  'ctrl-{': 'cursor-history:prev-within-editor'
+
+'atom-text-editor':
+  'ctrl-e': 'expose:toggle'
+  'ctrl-t': 'fuzzy-finder:toggle-file-finder'
+  'ctrl-w': 'core:close'
+  'ctrl-]': 'cursor-history:next'
+  'ctrl-[': 'cursor-history:prev'
+  'ctrl-}': 'cursor-history:next-within-editor'
+  'ctrl-{': 'cursor-history:prev-within-editor'

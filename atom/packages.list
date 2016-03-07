@@ -1,5 +1,7 @@
-Parinfer@1.10.0
+Parinfer@1.14.0
 cursor-history@0.5.9
-language-fish-shell@1.0.2
+ink@0.4.0
+language-fish-shell@1.0.3
+proto-repl@1.0.1
 vim-mode@0.64.0
 
