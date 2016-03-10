@@ -5,12 +5,40 @@
     disabledPackages: [
       "proto-repl"
     ]
+    packagesWithKeymapsDisabled: [
+      "lisp-paredit"
+    ]
   "cursor-history": {}
   editor:
+    autoIndent: false
+    autoIndentOnPaste: false
+    backUpBeforeSaving: true
     invisibles: {}
     nonWordCharacters: "(){}[]\\\"',;<>~#$%^&*|+=`…"
+    tabLength: 1
   "exception-reporting":
     userId: "e8922014-8094-c06b-1359-db2ec716cbc0"
+  "lisp-paredit":
+    indentationForms: [
+      "try"
+      "catch"
+      "finally"
+      "let"
+      "are"
+      "/^def.*/"
+      "fn"
+      "cond"
+      "if"
+      "if-let"
+      "for"
+      "/when.*/"
+      "testing"
+      "doseq"
+      "dotimes"
+      "loop"
+      "ns"
+    ]
+    strict: false
   "tree-view":
     hideVcsIgnoredFiles: true
   welcome:
