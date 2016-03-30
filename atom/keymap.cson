@@ -1,6 +1,9 @@
-# overwrite vim-mode
+'atom-text-editor.vim-mode':
+  'ctrl-c': 'unset!'
+
 'atom-text-editor.vim-mode:not(.insert-mode)':
   'ctrl-f': 'unset!'
+
   'ctrl-e': 'expose:toggle'
   'ctrl-t': 'fuzzy-finder:toggle-file-finder'
   'ctrl-w': 'core:close'
@@ -22,6 +25,8 @@
 #   'enter': 'autocomplete-plus:confirm'
 
 '.platform-linux atom-text-editor[data-grammar~="clojure"]':
-  'ctrl-z': 'lisp-paredit:indent'
-  'ctrl-m': 'lisp-paredit:expand-selection'
+  'ctrl-i': 'lisp-paredit:indent'
   'enter' : 'lisp-paredit:newline'
+
+'.platform-linux atom-text-editor[data-grammar~="clojure"].vim-mode:not(.insert-mode)':
+  'm':      'lisp-paredit:expand-selection'

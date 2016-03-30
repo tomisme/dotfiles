@@ -3,6 +3,7 @@
   core:
     autoHideMenuBar: true
     disabledPackages: [
+      "ink"
       "proto-repl"
     ]
     packagesWithKeymapsDisabled: [
@@ -14,7 +15,7 @@
     autoIndentOnPaste: false
     backUpBeforeSaving: true
     invisibles: {}
-    nonWordCharacters: "(){}[]\\\"',;<>~#$%^&*|+=`…"
+    nonWordCharacters: "()\"',;~@#$%^&{}[]`"
     tabLength: 1
   "exception-reporting":
     userId: "e8922014-8094-c06b-1359-db2ec716cbc0"
@@ -39,6 +40,7 @@
       "ns"
     ]
     strict: false
+  "proto-repl": {}
   "tree-view":
     hideVcsIgnoredFiles: true
   welcome:
