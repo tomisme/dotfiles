@@ -7,22 +7,24 @@ const path = require('path');
 const HOME = '/home/tom/';
 
 const files = [
-  { src: 'fish/config.fish',   dest: '.config/fish/config.fish' },
+  { src: 'boot/boot.properties',  dest: '.boot/boot.properties' },
+
+  { src: 'fish/config.fish', dest: '.config/fish/config.fish' },
 
   { src: 'atom/snippets.cson', dest: '.atom/snippets.cson' },
-  { src: 'atom/keymap.cson',   dest: '.atom/keymap.cson' },
-  { src: 'atom/config.cson',   dest: '.atom/config.cson' },
+  { src: 'atom/keymap.cson', dest: '.atom/keymap.cson' },
+  { src: 'atom/config.cson', dest: '.atom/config.cson' },
 
-  { src: 'lein/profiles.clj',  dest: '.lein/profiles.clj' },
+  { src: 'lein/profiles.clj', dest: '.lein/profiles.clj' },
 
-  { src: 'git/gitconfig',      dest: '.gitconfig' },
-  { src: 'git/gitignore',      dest: '.gitignore' },
+  { src: 'git/gitconfig', dest: '.gitconfig' },
+  { src: 'git/gitignore', dest: '.gitignore' },
 
-  { src: 'X/xinitrc',          dest: '.xinitrc' },
+  { src: 'X/xinitrc', dest: '.xinitrc' },
 
-  { src: 'npm/npmrc',          dest: '.npmrc' },
+  { src: 'npm/npmrc', dest: '.npmrc' },
 
-  { src: 'vim',                dest: '.vim' }
+  { src: 'vim', dest: '.vim' }
 ];
 
 files.map(function(file) {
