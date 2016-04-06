@@ -92,8 +92,7 @@ function gc
 end
 
 function gd
-	header "You're not gonna believe this, because it usually never happens, but I made a mistake"
-	git diff --word-diff $argv
+	git diff $argv
 end
 
 function gi
@@ -106,7 +105,7 @@ function gl
 end
 
 function gp
-	header "THOSE GUYS ARE INSIDE YOU BUILDING A PIECE OF SHIT ETHAN!!\nTHEY'RE INSIDE YOU BUILDING A MONUMENT TO COMPROMISE!!\nfuck them... fuck those people... fuck this whole thing ETHAN."
+	header "You're not gonna believe this, because it usually never happens, but I made a mistake"
 	git push $argv
 end
 

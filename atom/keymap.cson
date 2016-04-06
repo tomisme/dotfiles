@@ -3,30 +3,22 @@
 
 'atom-text-editor.vim-mode:not(.insert-mode)':
   'ctrl-f': 'unset!'
-
-  'ctrl-e': 'expose:toggle'
   'ctrl-t': 'fuzzy-finder:toggle-file-finder'
-  'ctrl-w': 'core:close'
   'ctrl-]': 'cursor-history:next'
   'ctrl-[': 'cursor-history:prev'
   'ctrl-}': 'cursor-history:next-within-editor'
   'ctrl-{': 'cursor-history:prev-within-editor'
 
 'atom-text-editor':
-  'ctrl-e': 'expose:toggle'
   'ctrl-t': 'fuzzy-finder:toggle-file-finder'
-  'ctrl-w': 'core:close'
   'ctrl-]': 'cursor-history:next'
   'ctrl-[': 'cursor-history:prev'
   'ctrl-}': 'cursor-history:next-within-editor'
   'ctrl-{': 'cursor-history:prev-within-editor'
 
-# 'atom-text-editor[data-grammar~="clojure"].autocomplete-active':
-#   'enter': 'autocomplete-plus:confirm'
-
-'.platform-linux atom-text-editor[data-grammar~="clojure"]':
+'atom-text-editor[data-grammar~="clojure"]':
   'ctrl-i': 'lisp-paredit:indent'
   'enter' : 'lisp-paredit:newline'
 
-'.platform-linux atom-text-editor[data-grammar~="clojure"].vim-mode:not(.insert-mode)':
+'atom-text-editor[data-grammar~="clojure"].vim-mode:not(.insert-mode)':
   'm':      'lisp-paredit:expand-selection'
