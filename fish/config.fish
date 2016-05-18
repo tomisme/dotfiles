@@ -91,6 +91,10 @@ function gc
 	git commit $argv
 end
 
+function gch
+	git checkout $argv
+end
+
 function gd
 	git diff $argv
 end

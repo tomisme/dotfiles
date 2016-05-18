@@ -45,3 +45,6 @@
     hideVcsIgnoredFiles: true
   welcome:
     showOnStartup: false
+".fish.source":
+  editor:
+    nonWordCharacters: "()\"',;~@#$%^&{}[]`"

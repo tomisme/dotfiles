@@ -1,3 +1,6 @@
+'atom-text-editor.autocomplete-active':
+  'enter': 'editor:newline'
+
 'atom-text-editor.vim-mode':
   'ctrl-c': 'unset!'
 
@@ -15,6 +18,9 @@
   'ctrl-[': 'cursor-history:prev'
   'ctrl-}': 'cursor-history:next-within-editor'
   'ctrl-{': 'cursor-history:prev-within-editor'
+
+'atom-text-editor.vim-mode.visual-mode':
+  'f': 'find-and-replace:show'
 
 'atom-text-editor[data-grammar~="clojure"]':
   'ctrl-i': 'lisp-paredit:indent'
