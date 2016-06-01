@@ -43,6 +43,7 @@
   "proto-repl": {}
   "tree-view":
     hideVcsIgnoredFiles: true
+  "vim-mode": {}
   welcome:
     showOnStartup: false
 ".fish.source":
