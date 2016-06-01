@@ -7,6 +7,7 @@
 
 'atom-text-editor.vim-mode:not(.insert-mode)':
   'f': 'find-and-replace:show'
+  'U': 'core:redo'
   ':': 'command-palette:toggle'
   'ctrl-t': 'fuzzy-finder:toggle-file-finder'
   'ctrl-]': 'cursor-history:next'
