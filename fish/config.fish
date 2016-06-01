@@ -1,14 +1,16 @@
-set -U fish_user_paths $fish_user_paths ~/bin/ ~/.npm-packages/bin/
+set -U fish_user_paths ~/.npm-packages/bin/
 set -xg VISUAL "/user/bin/vim"
 set -xg EDITOR "/user/bin/vim"
 set -xg BROWSER "/user/bin/chromium"
 
-fish_vi_mode
+fish_vi_key_bindings
 
 alias q "exit"
 alias v "vim"
 alias l "ll"
 alias h "how2"
+alias p "pacman"
+alias sp "sudo pacman"
 
 function reload
   clear
@@ -16,7 +18,7 @@ function reload
 end
 
 function header
-	set_color -b cyan -o black
+	set_color --bold --background cyan black
 	printf $argv
 	set_color normal
 	printf "\n\n"
@@ -31,19 +33,19 @@ end
 
 function fish_prompt
   printf '\n\u250C\u2500\u2500 '
-  if set -q __fish_vi_mode
-    switch $fish_bind_mode
-      case default
-        set_color --bold --background red white
-        printf 'Normal'
-      case insert
-        set_color --bold --background green white
-        printf 'Insert'
-      case visual
-        set_color --bold --background magenta white
-        printf 'Visual'
-    end
+  # if set -q __fish_vi_key_bindings
+  switch $fish_bind_mode
+    case default
+      set_color --bold --background red black
+      printf 'Normal'
+    case insert
+      set_color --bold --background yellow black
+      printf 'Insert'
+    case visual
+      set_color --bold --background magenta black
+      printf 'Visual'
   end
+  # end
     set_color normal
     if not set -q __fish_prompt_hostname
       set -g __fish_prompt_hostname (hostname|cut -d . -f 1)
