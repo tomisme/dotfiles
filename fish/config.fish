@@ -1,4 +1,4 @@
-set -U fish_user_paths ~/.npm-packages/bin/
+set -U fish_user_paths "~/.npm-packages/bin"
 set -xg VISUAL "/user/bin/vim"
 set -xg EDITOR "/user/bin/vim"
 set -xg BROWSER "/user/bin/chromium"
@@ -6,11 +6,8 @@ set -xg BROWSER "/user/bin/chromium"
 fish_vi_key_bindings
 
 alias q "exit"
-alias v "vim"
-alias l "ll"
 alias h "how2"
-alias p "pacman"
-alias sp "sudo pacman"
+alias a "sudo aura"
 
 function reload
   clear
@@ -33,7 +30,6 @@ end
 
 function fish_prompt
   printf '\n\u250C\u2500\u2500 '
-  # if set -q __fish_vi_key_bindings
   switch $fish_bind_mode
     case default
       set_color --bold --background red black
@@ -45,25 +41,24 @@ function fish_prompt
       set_color --bold --background magenta black
       printf 'Visual'
   end
-  # end
-    set_color normal
-    if not set -q __fish_prompt_hostname
-      set -g __fish_prompt_hostname (hostname|cut -d . -f 1)
-    end
-    # if current directory is a git repo, show git branch
-    if git status >/dev/null ^/dev/null
-      set git_branch_name (git branch | grep '*' | cut -c3-)
-      set git_branch (printf '(%s)' $git_branch_name)
-    end
-    printf ' %s%s %s%s %s%s %s%s %s\f\r\u2514\u2500\u25B6 ' \
-      (set_color yellow) \
-      (date "+%H:%M") \
-      (set_color blue) \
-      $USER \
-      (set_color $fish_color_cwd) \
-      (prompt_pwd) \
-      (set_color normal) \
-      $git_branch
+  set_color normal
+  if not set -q __fish_prompt_hostname
+    set -g __fish_prompt_hostname (hostname|cut -d . -f 1)
+  end
+  # if current directory is a git repo, show git branch
+  if git status >/dev/null ^/dev/null
+    set git_branch_name (git branch | grep '*' | cut -c3-)
+    set git_branch (printf '(%s)' $git_branch_name)
+  end
+  printf ' %s%s %s%s %s%s %s%s %s\f\r\u2514\u2500\u25B6 ' \
+    (set_color yellow) \
+    (date "+%H:%M") \
+    (set_color blue) \
+    $USER \
+    (set_color $fish_color_cwd) \
+    (prompt_pwd) \
+    (set_color normal) \
+    $git_branch
 end
 
 function atom-backup
