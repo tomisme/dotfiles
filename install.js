@@ -22,6 +22,8 @@ const files = [
 
   { src: 'npm/npmrc', dest: '.npmrc' },
 
+  { src: 'ssh/config', dest: '.ssh/config'},
+
   { src: 'vim', dest: '.vim' },
 
   { src: 'X/xinitrc', dest: '.xinitrc' }

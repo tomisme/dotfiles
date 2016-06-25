@@ -1,0 +1,9 @@
+Host staging.lillybamboo.com
+  ForwardAgent yes
+
+Host lillybamboo.com
+  ForwardAgent yes
+
+Host aur.archlinux.org
+  IdentityFile ~/.ssh/id_rsa_aur
+  User aur
