@@ -1,7 +1,11 @@
-Parinfer@1.14.0
+Parinfer@1.15.0
+atom-beautify@0.29.8
 cursor-history@0.5.9
+git-time-machine@1.5.3
 language-fish-shell@1.0.4
 lisp-paredit@0.5.3
+navigate@0.1.15
+pigments@0.29.2
 vim-mode@0.65.1
 
 
