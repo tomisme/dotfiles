@@ -1,4 +1,7 @@
 "*":
+  "atom-beautify":
+    general:
+      _analyticsUserId: "476ea662-c992-415d-8fa1-49ba829bd2a6"
   "autocomplete-plus": {}
   core:
     autoHideMenuBar: true
@@ -11,7 +14,6 @@
     ]
   "cursor-history": {}
   editor:
-    autoIndent: false
     autoIndentOnPaste: false
     backUpBeforeSaving: true
     invisibles: {}
@@ -41,11 +43,22 @@
     ]
     strict: false
   "proto-repl": {}
+  "split-diff":
+    diffWords: true
+    ignoreWhitespace: true
+    leftEditorColor: "red"
+    rightEditorColor: "green"
+    syncHorizontalScroll: true
   "tree-view":
     hideVcsIgnoredFiles: true
   "vim-mode": {}
   welcome:
     showOnStartup: false
+".clojure.source":
+  editor:
+    autoIndent: false
+    nonWordCharacters: "()\"',;~@#$%^&{}[]`"
+    tabLength: 1
 ".fish.source":
   editor:
     nonWordCharacters: "()\"',;~@#$%^&{}[]`"
