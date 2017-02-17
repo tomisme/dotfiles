@@ -1,13 +1,14 @@
-set -U fish_user_paths "~/.npm-packages/bin"
-set -xg VISUAL "/user/bin/vim"
-set -xg EDITOR "/user/bin/vim"
-set -xg BROWSER "/user/bin/chromium"
+set PATH $PATH ~/bin ~/.npm-packages/bin
+
+set -xg VISUAL "/usr/bin/vim"
+set -xg EDITOR "/usr/bin/vim"
+set -xg BROWSER "/usr/bin/google-chrome-stable"
 
 fish_vi_key_bindings
 
 alias q "exit"
-alias h "how2"
-alias a "sudo aura"
+alias r "trash-put"
+alias xclip "xclip -selection c"
 
 function reload
   clear
@@ -22,7 +23,8 @@ function header
 end
 
 function fish_greeting
-	cat ~/git/dotfiles/fish/greeting.txt
+  echo
+  neofetch
 end
 
 function fish_mode_prompt

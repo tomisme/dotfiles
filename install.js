@@ -7,9 +7,9 @@ const path = require('path');
 const HOME = '/home/tom/';
 
 const files = [
-  { src: 'atom/snippets.cson', dest: '.atom/snippets.cson' },
-  { src: 'atom/keymap.cson', dest: '.atom/keymap.cson' },
   { src: 'atom/config.cson', dest: '.atom/config.cson' },
+  { src: 'atom/keymap.cson', dest: '.atom/keymap.cson' },
+  { src: 'atom/snippets.cson', dest: '.atom/snippets.cson' },
 
   { src: 'boot/boot.properties',  dest: '.boot/boot.properties' },
 

@@ -3,21 +3,29 @@
     general:
       _analyticsUserId: "476ea662-c992-415d-8fa1-49ba829bd2a6"
   "autocomplete-plus": {}
+  "bracket-matcher":
+    autocompleteCharacters: [
+      "()"
+      "[]"
+      "{}"
+      "\"\""
+      "“”"
+      "‘’"
+      "«»"
+      "‹›"
+    ]
   core:
     autoHideMenuBar: true
-    disabledPackages: [
-      "ink"
-      "proto-repl"
-    ]
     packagesWithKeymapsDisabled: [
       "lisp-paredit"
     ]
+    telemetryConsent: "limited"
   "cursor-history": {}
   editor:
     autoIndentOnPaste: false
     backUpBeforeSaving: true
     invisibles: {}
-    nonWordCharacters: "()\"',;~@#$%^&{}[]`"
+    nonWordCharacters: "()\"',;~@#$%^&{}[]`."
     tabLength: 1
   "exception-reporting":
     userId: "e8922014-8094-c06b-1359-db2ec716cbc0"
@@ -42,6 +50,10 @@
       "ns"
     ]
     strict: false
+  navigate:
+    f1: "http://devdocs.io/#q=&searchterm"
+    f10: "https://duckduckgo.com/?q=&searchterm"
+    f6: "http://www.bing.com/search?q=&searchterm"
   "proto-repl": {}
   "split-diff":
     diffWords: true
@@ -49,8 +61,7 @@
     leftEditorColor: "red"
     rightEditorColor: "green"
     syncHorizontalScroll: true
-  "tree-view":
-    hideVcsIgnoredFiles: true
+  "tree-view": {}
   "vim-mode": {}
   welcome:
     showOnStartup: false
@@ -59,6 +70,34 @@
     autoIndent: false
     nonWordCharacters: "()\"',;~@#$%^&{}[]`"
     tabLength: 1
+".console.serpent.text":
+  editor:
+    nonWordCharacters: "()\"',;~@#$%^&{}[]`"
+    tabLength: 1
 ".fish.source":
   editor:
     nonWordCharacters: "()\"',;~@#$%^&{}[]`"
+".regexp.serpent.source":
+  editor:
+    nonWordCharacters: "()\"',;~@#$%^&{}[]`"
+    tabLength: 4
+".serpent.source":
+  editor:
+    nonWordCharacters: "()\"',;~@#$%^&{}[]`"
+    tabLength: 4
+".serpent.text.traceback":
+  editor:
+    nonWordCharacters: "()\"',;~@#$%^&{}[]`"
+    tabLength: 1
+".solidity.source":
+  editor:
+    nonWordCharacters: "()\"',;~@#$%^&{}[]`"
+    tabLength: 1
+".source.ts":
+  editor:
+    nonWordCharacters: "()\"',;~@#$%^&{}[]`"
+    tabLength: 1
+".source.tsx":
+  editor:
+    nonWordCharacters: "()\"',;~@#$%^&{}[]`"
+    tabLength: 1
