@@ -1,7 +1,4 @@
 "*":
-  "atom-beautify":
-    general:
-      _analyticsUserId: "476ea662-c992-415d-8fa1-49ba829bd2a6"
   "autocomplete-plus": {}
   "bracket-matcher":
     autocompleteCharacters: [
@@ -24,6 +21,7 @@
   editor:
     autoIndentOnPaste: false
     backUpBeforeSaving: true
+    fontSize: 15
     invisibles: {}
     nonWordCharacters: "()\"',;~@#$%^&{}[]`."
     tabLength: 1
@@ -62,7 +60,12 @@
     rightEditorColor: "green"
     syncHorizontalScroll: true
   "tree-view": {}
-  "vim-mode": {}
+  "vim-mode-plus":
+    stayOnDelete: true
+    stayOnTransformString: true
+    stayOnYank: true
+  "vim-mode-plus-ex-mode":
+    notifiedUseExMode: true
   welcome:
     showOnStartup: false
 ".clojure.source":

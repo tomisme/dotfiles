@@ -5,7 +5,6 @@
   'ctrl-[': 'cursor-history:prev'
   'f': 'find-and-replace:show'
   'U': 'core:redo'
-  # ':': 'command-palette:toggle'
   'ctrl-c': 'unset!'
   'ctrl-t': 'fuzzy-finder:toggle-file-finder'
 
