@@ -1,4 +1,6 @@
 "*":
+  "atom-package-deps":
+    ignored: []
   "autocomplete-plus": {}
   "bracket-matcher":
     autocompleteCharacters: [
@@ -21,12 +23,14 @@
   editor:
     autoIndentOnPaste: false
     backUpBeforeSaving: true
-    fontSize: 15
+    fontSize: 17
     invisibles: {}
-    nonWordCharacters: "()\"',;~@#$%^&{}[]`."
+    nonWordCharacters: "()\"',;~@#$%^&{}[]`./"
     tabLength: 1
   "exception-reporting":
     userId: "e8922014-8094-c06b-1359-db2ec716cbc0"
+  "linter-ui-default":
+    panelHeight: 120
   "lisp-paredit":
     indentationForms: [
       "try"
@@ -48,10 +52,29 @@
       "ns"
     ]
     strict: false
+  minimap: {}
   navigate:
     f1: "http://devdocs.io/#q=&searchterm"
     f10: "https://duckduckgo.com/?q=&searchterm"
     f6: "http://www.bing.com/search?q=&searchterm"
+  "one-dark-ui":
+    fontSize: 16
+    tabSizing: "Maximum"
+  parinfer:
+    "file-extensions": [
+      ".boot"
+      ".cl"
+      ".clj"
+      ".cljc"
+      ".cljs"
+      ".edn"
+      ".el"
+      ".lfe"
+      ".lisp"
+      ".lsp"
+      ".scm"
+    ]
+    "use-smart-mode?": true
   "proto-repl": {}
   "split-diff":
     diffWords: true
@@ -61,6 +84,7 @@
     syncHorizontalScroll: true
   "tree-view": {}
   "vim-mode-plus":
+    keymapYToYankToLastCharacterOfLine: true
     stayOnDelete: true
     stayOnTransformString: true
     stayOnYank: true

@@ -10,6 +10,8 @@ alias q "exit"
 alias r "trash-put"
 alias xclip "xclip -selection c"
 
+eval (python -m virtualfish)
+
 function reload
   clear
   source ~/.config/fish/config.fish
@@ -61,6 +63,10 @@ function fish_prompt
     (prompt_pwd) \
     (set_color normal) \
     $git_branch
+  # virtualenv
+  if set -q VIRTUAL_ENV
+      echo -n -s (set_color -b blue white) "(" (basename "$VIRTUAL_ENV") ")" (set_color normal) " "
+  end
 end
 
 function atom-backup
