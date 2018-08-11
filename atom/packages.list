@@ -1,11 +1,11 @@
-Parinfer@1.15.0
-atom-beautify@0.29.8
-cursor-history@0.5.9
-git-time-machine@1.5.3
-language-fish-shell@1.0.4
-lisp-paredit@0.5.3
-navigate@0.1.15
-pigments@0.29.2
-vim-mode@0.65.1
-
+click-link@1.0.11
+cursor-history@0.13.1
+language-fish-shell@1.1.0
+language-racket@0.4.0
+lisp-paredit@0.6.0
+minimap@4.29.8
+nucleus-dark-ui@0.12.3
+parinfer@1.23.0
+vim-mode-plus@1.34.0
+vim-mode-plus-ex-mode@0.11.0
 

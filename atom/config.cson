@@ -31,6 +31,7 @@
     userId: "e8922014-8094-c06b-1359-db2ec716cbc0"
   "linter-ui-default":
     panelHeight: 120
+    showPanel: true
   "lisp-paredit":
     indentationForms: [
       "try"

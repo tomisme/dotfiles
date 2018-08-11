@@ -10,18 +10,9 @@ alias q "exit"
 alias r "trash-put"
 alias xclip "xclip -selection c"
 
-eval (python -m virtualfish)
-
 function reload
   clear
   source ~/.config/fish/config.fish
-end
-
-function header
-	set_color --bold --background cyan black
-	printf $argv
-	set_color normal
-	printf "\n\n"
 end
 
 function fish_greeting
@@ -77,36 +68,61 @@ function atom-reset
   apm install --packages-file ~/git/dotfiles/atom/packages.list
 end
 
+function du1
+	 du -h --max-depth 0 * | sort -h
+end
+
+function du2
+	 du -h --max-depth 1 * | sort -h
+end
+
+function su
+	 /bin/su --shell=/usr/bin/fish $argv
+end
+
+function clear-tree
+	 clear
+	 tree -C -I node_modules $argv
+end
+
+function t
+	 clear-tree -L 1 $argv
+end
+
+function t2
+	 clear-tree -L 2 $argv
+end
+
+function t3
+	 clear-tree -L 3 $argv
+end
+
 function ga
-	header "What, so everyone's supposed to sleep every single night now? Y-you realize that nighttime makes up half of all time?"
-	git add $argv
+	 git add $argv
 end
 
 function gb
-  header "This is why you don't freeze time, you guys. It's incredibly irresponsible."
   git checkout -b $argv
 end
 
 function gba
-	header "Where are my testicles, Summer?"
   git branch -av
 end
 
 function gc
-	git commit $argv
+	 git commit $argv
 end
 
 function gch
-	git checkout $argv
+	 git checkout $argv
 end
 
 function gd
-	git diff $argv
+	 git diff $argv
 end
 
 function gi
-	header "25 shmeckles? I-I-I-I don't even know what that- what is that? Is that a lot?"
-	curl -L -s https://www.gitignore.io/api/$argv
+	 curl -L -s https://www.gitignore.io/api/$argv
 end
 
 function gl
@@ -114,40 +130,9 @@ function gl
 end
 
 function gp
-	header "You're not gonna believe this, because it usually never happens, but I made a mistake"
-	git push $argv
+	 git push $argv
 end
 
 function gs
-  header "All right, everything resolved? Everybody nice and certain about their position in my world?"
-	git status -sb $argv
-end
-
-function du1
-	du -h --max-depth 0 * | sort -h
-end
-
-function du2
-	du -h --max-depth 1 * | sort -h
-end
-
-function su
-	/bin/su --shell=/usr/bin/fish $argv
-end
-
-function clear-tree
-	clear
-	tree -C -I node_modules $argv
-end
-
-function t
-	clear-tree -L 1 $argv
-end
-
-function t2
-	clear-tree -L 2 $argv
-end
-
-function t3
-	clear-tree -L 3 $argv
+	 git status -sb $argv
 end
