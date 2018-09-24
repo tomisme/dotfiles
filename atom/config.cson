@@ -77,13 +77,16 @@
     ]
     "use-smart-mode?": true
   "proto-repl": {}
+  "spell-check":
+    useLocales: false
   "split-diff":
     diffWords: true
     ignoreWhitespace: true
     leftEditorColor: "red"
     rightEditorColor: "green"
     syncHorizontalScroll: true
-  "tree-view": {}
+  "tree-view":
+    hideVcsIgnoredFiles: true
   "vim-mode-plus":
     keymapYToYankToLastCharacterOfLine: true
     stayOnDelete: true

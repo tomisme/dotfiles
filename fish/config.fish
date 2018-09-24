@@ -1,4 +1,5 @@
-set PATH $PATH ~/bin ~/.npm-packages/bin
+# set PATH $PATH ~/bin ~/.npm-packages/bin
+set PATH $PATH ~/bin
 
 set -xg VISUAL "/usr/bin/vim"
 set -xg EDITOR "/usr/bin/vim"
@@ -9,6 +10,7 @@ fish_vi_key_bindings
 alias q "exit"
 alias r "trash-put"
 alias xclip "xclip -selection c"
+alias outdated "clojure -Aoutdated -a outdated"
 
 function reload
   clear
