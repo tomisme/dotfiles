@@ -1,8 +1,0 @@
-;; -*- mode: clojure -*-
-
-{
- :quickmarks
- {
-  :d "http://ddg.gg"
- }
-}

@@ -1,16 +1,11 @@
-# set PATH $PATH ~/bin ~/.npm-packages/bin
-set PATH $PATH ~/bin
+set PATH $PATH ~/bin ~/.npm-packages/bin
+# set PATH $PATH ~/bin
 
 set -xg VISUAL "/usr/bin/vim"
 set -xg EDITOR "/usr/bin/vim"
-set -xg BROWSER "/usr/bin/google-chrome-stable"
+set -xg BROWSER "/usr/bin/firefox"
 
 fish_vi_key_bindings
-
-alias q "exit"
-alias r "trash-put"
-alias xclip "xclip -selection c"
-alias outdated "clojure -Aoutdated -a outdated"
 
 function reload
   clear
@@ -62,6 +57,22 @@ function fish_prompt
   end
 end
 
+function q
+  exit
+end
+
+function r
+  trash-put
+end
+
+function xclip
+  xclip -selection c
+end
+
+function outdated 
+  clojure -Aoutdated -a outdated
+end
+
 function atom-backup
   apm list --installed --bare > ~/git/dotfiles/atom/packages.list
 end
@@ -71,11 +82,21 @@ function atom-reset
 end
 
 function du1
-	 du -h --max-depth 0 * | sort -h
+	 du -ch --max-depth 0 * | sort -h
+end
+
+# includes hidden files/folders
+function dua1
+	 du -ch --max-depth 0 * .* | sort -h
 end
 
 function du2
-	 du -h --max-depth 1 * | sort -h
+	 du -ch --max-depth 1 * | sort -h
+end
+
+# includes hidden files/folders
+function dua2
+	 du -ch --max-depth 1 * .* | sort -h
 end
 
 function su
@@ -108,7 +129,7 @@ function gb
 end
 
 function gba
-  git branch -av
+  git branch -av $argv
 end
 
 function gc
@@ -138,3 +159,13 @@ end
 function gs
 	 git status -sb $argv
 end
+
+function yclip
+  youtube-dl (xclip -o)
+end
+
+function webmp3
+  find . -type f -iname "*.webm" -exec bash -c 'FILE="$1"; ffmpeg -i "${FILE}" -vn -ab 128k -ar 44100 -y "${FILE%.webm}.mp3";' _ '{}' \;
+end
+
+# eval (direnv hook fish)
