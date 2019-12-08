@@ -22,6 +22,9 @@
     autoHideMenuBar: true
     disabledPackages: [
       "exception-reporting"
+      "linter-kondo"
+      "linter"
+      "linter-ui-default"
     ]
     packagesWithKeymapsDisabled: [
       "lisp-paredit"

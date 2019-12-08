@@ -1,0 +1,11 @@
+{
+    "window.zoomLevel": 1,
+    "workbench.colorTheme": "Visual Studio Dark",
+    "keyboard.dispatch": "keyCode",
+    "editor.fontSize": 16,
+    "editor.tabSize": 2,
+    "javascript.updateImportsOnFileMove.enabled": "never",
+    "git.autofetch": true,
+    "files.insertFinalNewline": true,
+    "editor.fontFamily": "'monospace', monospace"
+}
