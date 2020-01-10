@@ -7,5 +7,14 @@
     "javascript.updateImportsOnFileMove.enabled": "never",
     "git.autofetch": true,
     "files.insertFinalNewline": true,
-    "editor.fontFamily": "'monospace', monospace"
+    "editor.fontFamily": "'monospace', monospace",
+    "workbench.editor.showTabs": false,
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "prettier.disableLanguages": [
+        "clojure"
+    ],
+    "prettier.quoteProps": "preserve",
+    "prettier.tabWidth": 2
 }

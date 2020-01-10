@@ -1,5 +1,4 @@
-set PATH $PATH ~/bin ~/.npm-packages/bin
-# set PATH $PATH ~/bin
+set PATH $PATH ~/bin ~/.npm-packages/bin ~/.cargo/bin
 
 set -xg VISUAL "/usr/bin/vim"
 set -xg EDITOR "/usr/bin/vim"
@@ -65,7 +64,7 @@ function r
   trash-put
 end
 
-function xclip
+function xclip2
   xclip -selection c
 end
 
@@ -164,6 +163,7 @@ function yclip
   youtube-dl (xclip -o)
 end
 
+# convert .webm files to .mp3 w/ ffmpeg
 function webmp3
   find . -type f -iname "*.webm" -exec bash -c 'FILE="$1"; ffmpeg -i "${FILE}" -vn -ab 128k -ar 44100 -y "${FILE%.webm}.mp3";' _ '{}' \;
 end
