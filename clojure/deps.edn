@@ -1,6 +1,11 @@
 ;; https://github.com/seancorfield/dot-clojure
 {:aliases
  {
+  ;; clj -A:socket -r
+  :socket
+  {:jvm-opts ["-Dclojure.server.repl={:port,0,:accept,clojure.core.server/repl}"]
+   :main-opts ["-e" "(.getLocalPort,(get-in,@#'clojure.core.server/servers,[\"repl\",:socket]))"]}
+
   :outdated
   {:extra-deps {olical/depot {:mvn/version "RELEASE"}}
    :main-opts ["-m" "depot.outdated.main"]}
